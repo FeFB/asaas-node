@@ -1,0 +1,30 @@
+{
+  "name": "asaas-node",
+  "version": "0.0.2",
+  "description": "It is an unofficial integreation with asaas.com Rest API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FeFB/asaas-node.git"
+  },
+  "keywords": [
+    "geração",
+    "de",
+    "boletos",
+    "asaas",
+    "pagamento"
+  ],
+  "author": "Felipe Berton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FeFB/asaas-node/issues"
+  },
+  "homepage": "https://github.com/FeFB/asaas-node#readme",
+  "dependencies": {
+    "got": "^7.1.0",
+    "rxjs": "^5.4.3"
+  }
+}
