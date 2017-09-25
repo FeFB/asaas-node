@@ -1,6 +1,6 @@
 # ASAAS-NODE
-The project is a wrapper for the ASAAS' Restful API. The project is 
-using RxJS, so you must know something about.
+The project is an unofficial wrapper for the [ASAAS.com](https://www.asaas.com/) Rest API. 
+The project is using RxJS, so you must know something about.
 
 ## Getting Started
 
@@ -20,7 +20,7 @@ npm install --save asaas-node
 How to use:
 
 ```
-const asaasAPI = require('asaas-node');
+const asaas = require('asaas-node');
 const api = new asaasAPI('sandbox', YOUR_API_KEY); 
 /* you can use 'production' 
 instead of 'sandbox'. 
@@ -34,9 +34,15 @@ const customer = api.customer;
 Adding a new customer :
 
 ```
-customer.add(customerInfo)
+const customerInfo = {
+	name: 'Bruce Wayne',
+	cpfCnpj: '37132385615',
+	email: 'IamBatman@gmail.com'
+} 
+
+customer.new(customerInfo)
 	.subscribe(
-		(data) => console.log(data),
+		(body) => console.log(body),
 		(err) => console.log(err)
 	);
 ```
@@ -47,7 +53,7 @@ Deleting a customer:
 ```
 customer.delete(customerId)
 	.subscribe(
-		(data) => console.log(data),
+		(body) => console.log(body),
 		(err) => console.log(err)
 	);
 ```
@@ -59,7 +65,7 @@ Getting a customer:
 ```
 customer.get(cusutomerId)
 	.subscribe(
-		(data) => console.log(data),
+		(body) => console.log(body),
 		(err) => console.log(err)
 	);
 
@@ -73,7 +79,7 @@ customerInfo: the object with the props to update.
 ```
 customer.update(customerId, customerInfo)
 	.subscribe(
-		(res) => console.log(res),
+		(body) => console.log(body),
 		(err) => console.log(err)
 	);
 ```
@@ -86,7 +92,7 @@ customerPropsFilters: the object with the filters props.
 ```
 customer.getList(customerPropsFilter)
 	.subscribe(
-		(res) => console.log(res),
+		(body) => console.log(body),
 		(err) => console.log(err)
 	);
 ```
