@@ -96,3 +96,94 @@ customer.getList(customerPropsFilter)
 		(err) => console.log(err)
 	);
 ```
+
+## Payments Examples
+The same logic is applied
+
+```
+//Get Payments APIs
+const payments = api.payments;
+```
+
+The methods:
+
+```
+payments.new(paymentInfo)
+	.subscribe(
+		(body) => console.log(body),
+		(err) => console.log(err)
+	);
+
+payments.newSplit(paymentInfo, splitInfo)
+	.subscribe(
+		(body) => console.log(body),
+		(err) => console.log(err)
+	);
+
+payments.get(paymentId)
+	.subscribe(
+		(body) => console.log(body),
+		(err) => console.log(err)
+	);
+
+payments.delete(paymentId)
+	.subscribe(
+		(body) => console.log(body),
+		(err) => console.log(err)
+	);
+
+payments.getList(filters)
+	.subscribe(
+		(body) => console.log(body),
+		(err) => console.log(err)
+	);
+
+payments.update(id, params)
+	.subscribe(
+		(body) => console.log(body),
+		(err) => console.log(err)
+	);
+
+payments.refund(id)
+	.subscribe(
+		(body) => console.log(body),
+		(err) => console.log(err)
+	);
+```
+
+## Notification
+
+```
+	//Get Notification APIs
+const notification = api.notification;
+```
+
+```
+notification.get(customerId)
+	.subscribe(
+		(body) => console.log(body),
+		(err) => console.log(err)
+	);
+
+notification.update(id, params)
+	.subscribe(
+		(body) => console.log(body),
+		(err) => console.log(err)
+	);
+
+```
+
+### Accounts
+
+```
+//Get accounts APIs
+const accounts = api.accounts;
+```
+```
+accounts.new(accountInfo)
+	.subscribe(
+		(body) => console.log(body),
+		(err) => console.log(err)
+	);
+
+```

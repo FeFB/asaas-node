@@ -1,6 +1,6 @@
 {
   "name": "asaas-node",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "It is an unofficial integreation with asaas.com Rest API",
   "main": "index.js",
   "scripts": {
