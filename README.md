@@ -1,5 +1,5 @@
 # ASAAS-NODE
-The project is an unofficial wrapper for the [ASAAS.com](https://www.asaas.com/) Rest API. 
+The project is an unofficial wrapper for the [ASAAS.com](https://www.asaas.com/) Rest API.
 The project is using RxJS, so you must know something about.
 
 ## Getting Started
@@ -21,9 +21,9 @@ How to use:
 
 ```
 const asaas = require('asaas-node');
-const api = new asaasAPI('sandbox', YOUR_API_KEY); 
-/* you can use 'production' 
-instead of 'sandbox'. 
+const api = new asaasAPI('sandbox', YOUR_API_KEY);
+/* you can use 'production'
+instead of 'sandbox'.
 The API_KEI must be from the correct environment.
 */
 
@@ -38,7 +38,7 @@ const customerInfo = {
 	name: 'Bruce Wayne',
 	cpfCnpj: '37132385615',
 	email: 'IamBatman@gmail.com'
-} 
+}
 
 customer.new(customerInfo)
 	.subscribe(
@@ -113,6 +113,16 @@ payments.new(paymentInfo)
 		(body) => console.log(body),
 		(err) => console.log(err)
 	);
+
+/* If you need create more than one payment, you can pass an Array<paymentInfo>.
+All the response will be in the responseArray.
+This pipeline will not generate nothing in (err) for bad request, the error will be
+in the responseArray.
+*/
+payments.newBatch(paymentsInfo)
+	.subscribe(
+		(responseArray) => console.log(responseArray)
+		);
 
 payments.newSplit(paymentInfo, splitInfo)
 	.subscribe(
